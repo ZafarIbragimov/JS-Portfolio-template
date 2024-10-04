@@ -1,0 +1,483 @@
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    position: relative;
+}
+
+.about .text {
+    width: 400px;
+}
+
+.square1,
+.square2 {
+    position: relative;
+    top: 10%;
+    left: -15%;
+    width: 650px;
+    height: 480px;
+    text-align: center;
+    border-radius: 10px;
+    background: #100a1d;
+    box-shadow: 0px 0px 5px #219cf3,
+    2px 2px 1px #00e9de,
+    inset 10px 0px 60px #080a11,
+    inset -27px -32px 60px #090912,
+    inset -5px -6px 30px #0b83ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.square2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    top: -20%;
+    left: 0;
+    height: 400px;
+    text-align: center;
+}
+
+.icon-per,
+.icon-c {
+    content: '';
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #2fc0ff;
+    box-shadow: 0px 0px 30px #219cf3, 
+    inset 9px -20px 36px #000a11,
+    inset -5px 8px 12px #00e5ff,
+    inset 17px 17px 30px #0b83ff;
+    display: block;
+    margin: 0 auto;
+}
+
+.icon-per ion-icon,
+.icon-c ion-icon {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.icon-per p {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-circle {
+    width: 5px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    background: #2fc0ff;
+    box-shadow: 0px 0px 10px #219cf3,
+    3px 3px 1px #00e9de, 
+    inset 10px 0px 20px #080a11,
+    inset -96px -30px 100px #090912,
+    inset -6px -26px 120px #0b83ff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    animation: roti 6s linear forwards infinite;
+}
+
+@keyframes roti {
+    0% {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+.icon-circle::before {
+    content: '';
+    width: 150px;
+    height: 5px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    background: #2fc0ff;
+    box-shadow: 0px 0px 10px #219cf3,
+    3px 3px 1px #00e9de, 
+    inset 10px 0px 20px #080a11,
+    inset -96px -30px 100px #090912,
+    inset -6px -26px 120px #0b83ff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
+
+.icon-circle::after {
+    content: '';
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    background: #2fc0ff;
+    box-shadow: 0px 0px 5px #219cf3,
+    1px 1px 1px #00e9de, 
+    inset 10px 0px 30px #080a11,
+    inset -5px -6px 30px #090912;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+
+.bg-square {
+    width: 5px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    background: #2fc0ff;
+    box-shadow: 0px 0px 10px #219cf3,
+    3px 3px 1px #00e9de, 
+    inset 10px 0px 20px #080a11,
+    inset -96px -30px 100px #090912,
+    inset -6px -26px 120px #0b83ff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.bg-square::before {
+    content: '';
+    width: 450px;
+    height: 5px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    background: #2fc0ff;
+    box-shadow: 0px 0px 10px #219cf3,
+    3px 3px 1px #00e9de, 
+    inset 10px 0px 20px #080a11,
+    inset -96px -30px 100px #090912,
+    inset -6px -26px 120px #0b83ff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
+
+.bg-square::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    background: #2fc0ff;
+    box-shadow: 0px 0px 5px #219cf3,
+    1px 1px 1px #00e9de, 
+    inset 10px 0px 30px #080a11,
+    inset -5px -6px 60px #090912;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+
+
+.text-center {
+    margin-bottom: 100px;
+}
+
+.client {
+    width: 100%;
+    height: 100%;
+}
+.grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+}
+
+.f1-c, 
+.f2-c, 
+.f3-c {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 5px #219cf3,
+    2px 2px 1px #08e9de,
+    inset 10px 0px 60px #080a11,
+    inset -27px -32px 60px #090912,
+    inset -5px -6px 30px #0b83ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: .6s ease;
+    z-index: 0;
+}
+
+.f1-text,
+.f2-text,
+.f3-text {
+    position: absolute;
+    opacity: 0;
+    width: 250px;
+    left: 30%;
+    transition: 0.5s ease;
+    z-index: -1;
+    scale: 0;
+}
+
+.f2-text {
+    left: 25%;
+}
+
+.f3-text {
+    left: 80%;
+}
+
+.icon-c {
+    transition: .6s ease;
+}
+
+.f1-c:hover, 
+.f2-c:hover, 
+.f3-c:hover {
+    width: 250%;
+}
+
+.f1-c:hover .icon-c, 
+.f3-c:hover .icon-c {
+    transform: translateX(-150%);
+}
+
+.f2-c:hover .icon-c {
+    transform: translateX(150%);
+} 
+
+.f1-c:hover .f1-text {
+    opacity: 1;
+    scale: 1;
+    left: 25%;
+    transition: .6s ease;
+}
+
+.f2-c:hover .f2-text {
+    opacity: 1;
+    scale: 1;
+    left: 30%;
+    transition: .6s ease;
+}
+
+.f3-c:hover .f3-text {
+    opacity: 1;
+    scale: 1;
+    left: 75%;
+    transition: .6s ease;
+}
+
+
+
+
+.square1,
+.square2 {
+    top: 0;
+    opacity: 0;
+    transition: 1s ease .1s;
+}
+.square1.show {
+    top: 10%;
+    opacity: 1;
+}
+.square2.show {
+    top: -15%;
+    opacity: 1;
+}
+
+.grid {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s ease .1s;
+}
+.grid.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+@media (max-width : 1650px)
+{
+}
+@media (max-width : 1500px)
+{
+    .square1
+    {
+        left: -25%;
+    }
+
+}
+@media (max-width : 1350px)
+{
+    .square1
+    {
+        left: -40%;
+        transform: scale(0.9);
+    }
+    .square2
+    {
+        transform: scale(0.9);
+    }
+    .grid
+    {
+        flex-wrap: wrap;
+    }
+    .f1-c,
+    .f2-c,
+    .f3-c
+    {
+        flex: 0 1 50%;
+        margin: unset;
+        position: relative;
+    }
+    .f1-c:hover,
+    .f2-c:hover,
+    .f3-c:hover
+    {
+        flex: 1 1 50%;
+    }
+    .f1-c:hover .f1-text,
+    .f3-c:hover .f3-text
+    {
+        left: 50%;
+    }
+
+}
+@media (max-width : 1200px)
+{
+}
+@media (max-width : 1100px)
+{
+    .square1
+    {
+        left: -50%;
+        transform: scale(0.8);
+    }
+}
+@media (max-width : 960px)
+{
+    .about
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .square1
+    {
+        top: 0;
+        left: 20%;
+        transform: scale(0.8);
+    }
+    .square2
+    {
+        top: -50%;
+        width: 550px;
+        height: 300px;
+    }
+}
+@media (max-width : 788px)
+{
+    .square1
+    {
+        top: 0;
+        left: -15%;
+        order: -1;
+        transform: scale(0.8);
+        width: 550px;
+        height: 380px;
+    }
+    .square2,
+    .square2.show
+    {
+        top: -50%;
+        width: 522px;
+        height: 315px;
+        top: 15%;
+    }
+
+    .f1-c,
+    .f2-c,
+    .f3-c
+    {
+        flex: 1 1 50%;
+        margin: 0 auto;
+    }
+    .f1-c:hover .icon-c,
+    .f2-c:hover .icon-c,
+    .f3-c:hover .icon-c
+    {
+        transform: translateY(-100%);
+    }
+    .f1-text,
+    .f2-text,
+    .f3-text
+    {
+        top: 50%;
+        left: 30%;
+    }
+    .f1-c:hover .f1-text,
+    .f2-c:hover .f2-text,
+    .f3-c:hover .f3-text
+    {
+        left: 5%;
+        top: 50%;
+    }
+}
+@media (max-width : 545px)
+{
+    .about .text
+    {
+        width: 350px;
+    }
+    .square1
+    {
+        top: 0;
+        left: -15%;
+        order: -1;
+        transform: scale(0.75);
+    }
+    .square2
+    {
+        transform: scale(0.75);
+    }
+}
+@media (max-width : 495px)
+{
+    .square1
+    {
+        transform: scale(0.7);
+    }
+    .square2
+    {
+        left: -13%;
+    }
+}
