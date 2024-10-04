@@ -1,0 +1,575 @@
+.menu-in {
+    position: fixed;
+    left: 76.5%;
+    bottom: -35px;
+    transform: translate(-50%, -50%);
+    background: #0c1024;
+    box-shadow: 0px 0px 15px #219cf3,
+    0px 0px 17px #219cf3,
+    inset 0px 0px 5px #219cf3;
+    border-radius: 10%;
+    z-index: 3;
+    transition: .4s ease;
+}
+.menu-in:hover {
+    background: #0c1024;
+    box-shadow: 0px 0px 50px #219cf3,
+    0px 0px 30px #219cf3;
+}
+
+.menu-in::before {
+    content: '';
+    width: 100px;
+    height: 121px;
+    border-radius: 10px;
+    background: #0c1024;
+    box-shadow: 0px 0px 15px #219cf3,
+    0px 0px 17px #219cf3,
+    inset 0px 0px 3px #219cf3;
+    position: absolute;
+    top: 46px;
+    right: -131px;
+    transform: rotate(306deg);
+    z-index: -23;
+    transition: .4s ease;
+}
+
+.menu-in::after {
+    content: '';
+    width: 100px;
+    height: 121px;
+    border-radius: 10px;
+    background: #0c1024;
+    box-shadow: 0px 0px 15px #219cf3,
+    0px 0px 17px #219cf3,
+    inset 0px 0px 3px #219cf3;
+    position: absolute;
+    top: 51px;
+    right: 97px;
+    transform: rotate(233deg);
+    z-index: -23;
+    transition: .4s ease;
+}
+
+.menu-bg {
+    position: relative;
+}
+.menu-bg::before {
+    content: '';
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 82px;
+    right: -20px;
+    background: #d4ebf5;
+    box-shadow: 0px 0px 17px #219cf3,
+    0px 0px 20px #219cf3;
+    border-radius: 50%;
+    animation: balling1 5s linear forwards infinite;
+}
+.menu-bg::after {
+    content: '';
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 82px;
+    right: 86px;
+    background: #d4ebf5;
+    box-shadow: 0px 0px 17px #219cf3,
+    0px 0px 20px #219cf3;
+    border-radius: 50%;
+    animation: balling2 5s linear forwards infinite;
+}
+
+@keyframes balling1 {
+    0% {
+        transform: rotate(233deg);
+    }
+    25%{
+        transform: translate(50px, -50px);
+    }
+    50%{
+        transform: translate(87px, -30px);
+    }
+    75%{
+        transform: translate(170px, 20px);
+    }
+    85%{
+        transform: translate(170px, 20px);
+    }
+    95%{
+        transform: translate(170px, 20px);
+    }
+    100%{
+        transform: rotate(233deg);
+    }
+}
+
+@keyframes balling2 {
+    0% {
+        transform: rotate(233deg);
+    }
+    25%{
+        transform: translate(-35px, -50px);
+    }
+    50%{
+        transform: translate(-70px, -30px);
+        animation-timing-function: linear;
+    }
+    75%{
+        transform: translate(-150px, 30px);
+    }
+    85%{
+        transform: translate(-150px, 30px);
+    }
+    95%{
+        transform: translate(-150px, 30px);
+    }
+    100%{
+        transform: rotate(233deg);
+    }
+}
+
+.menu-bg ion-icon,
+.link-a ion-icon {
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: #fff;
+    transition: .4s;
+    cursor: pointer;
+    padding: 20px;
+    z-index: 1;
+    border-radius: 10%;
+    display: block;
+    margin: 0 auto;
+}
+
+.blur {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, #080a11, #0c1024);
+    opacity: 0;
+    transition: .6s;
+}
+
+.second-menu {
+    transition: .4s;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;   
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    align-items: center;
+    z-index: 3;
+}
+
+.link-a {
+    height: 0vh;
+    position: relative;
+    background: transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    box-shadow: 0px 0px 20px #219cf3, 0px 0px 0px #fff;
+    width: 80%;
+    transition: .6s;
+}
+
+.link-a ion-icon {
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: #fff;
+    transition: .4s;
+    cursor: pointer;
+    padding: 20px;
+    z-index: 1;
+    border-radius: 10%;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 15px #219cf3,
+    0px 0px 17px transparent,
+    inset 0px 0px 3px transparent;
+    transition: .6s ease .1s;
+}
+.link-a ion-icon:hover {
+    box-shadow: 0px 0px 20px #219cf3,
+    0px 0px 20px #fff,
+    inset 0px 0px 5px #219cf3,
+    inset 0px 0px 5px transparent;
+}
+
+.logoL {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .4s;
+    display: none;
+}
+
+.new-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: -100%;
+    left: -100%;
+}
+
+.cards {
+    position: relative;
+    opacity: 0;
+    width: 60%;
+    height: 0vh;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    transition: .6s;
+}
+
+.card-scale {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .6s ease;
+}
+
+.card1-menu {
+    width: 125px;
+    height: 250px;
+    border-radius: 10px;
+    background: #2fc0ff;
+    box-shadow: 0px 0px 10px #219cf3,
+    4px 4px 1px #00e9de, 
+    inset 12px 10px 60px #080a11,
+    inset -10px -10px 60px #090912,
+    inset -5px -6px 30px #0b83ff;
+    position: absolute;
+    top: 47%;
+    right: 36%;
+    transform: rotate(60deg) skew(5deg, -33deg);
+}
+.card2-menu {
+    width: 125px;
+    height: 250px;
+    border-radius: 10px;
+    background: #2fc0ff;
+    box-shadow: 0px 0px 10px #219cf3,
+    4px 4px 1px #00e9de, 
+    inset 12px 10px 60px #080a11,
+    inset -10px -10px 60px #090912,
+    inset -5px -6px 30px #0b83ff;
+    position: absolute;
+    top: 41%;
+    right: 36%;
+    transform: rotate(60deg) skew(5deg, -33deg);
+}
+.card3-menu {
+    width: 125px;
+    height: 250px;
+    border-radius: 10px;
+    background: #2fc0ff;
+    box-shadow: 0px 0px 10px #219cf3,
+    4px 4px 1px #00e9de, 
+    inset 12px 10px 60px #080a11,
+    inset -10px -10px 60px #090912,
+    inset -5px -6px 30px #0b83ff;
+    position: absolute;
+    top: 34%;
+    right: 36%;
+    transform: rotate(60deg) skew(5deg, -33deg);
+}
+.card4-menu {
+    width: 125px;
+    height: 250px;
+    border-radius: 10px;
+    background: #2fc0ff;
+    box-shadow: 0px 0px 10px #219cf3,
+    4px 4px 1px #00e9de, 
+    inset 12px 10px 60px #080a11,
+    inset -10px -10px 60px #090912,
+    inset -5px -6px 30px #0b83ff;
+    position: absolute;
+    top: 27%;
+    right: 36%;
+    transform: rotate(60deg) skew(5deg, -33deg);
+}
+
+
+
+.menu2.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 22;
+}
+.menu2.active .menu-bg ion-icon {
+    background: #0c1024;
+    box-shadow: 0px 0px 50px #219cf3, 0px 0px 30px #219cf3;
+}
+.menu2.active .blur {
+    display: block;
+    opacity: 1;
+    z-index: -1;
+}
+.menu2.active .second-menu {
+    display: grid;
+}
+.menu2.active .link-a {
+    height: 100vh;
+    z-index: 1;
+    box-shadow: 0px 0px 20px #219cf3, 0px 0px 0px #fff;
+}
+.menu2.active .link-a:hover {
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+    box-shadow: 0px 0px 20px #219cf3, 0px 0px 20px #fff;
+}
+
+.menu2.active .logoL {
+    display: block;
+}
+
+.menu2.active .new-menu {
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    opacity: 1;
+    top: 0;
+    left: 0;
+}
+
+.menu2.active .cards {
+    opacity: 1;
+    z-index: 1;
+    height: 100vh;
+    box-shadow: 0px 0px 30px #219cf3, 0px 0px 54px #219cf3, 0px 0px 10px #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+.menu2.active .card1-menu {
+    animation: cardmaster1 3s linear forwards;
+    animation-delay: .5s;
+}
+.menu2.active .card2-menu {
+    animation: cardmaster2 3s linear forwards;
+    animation-delay: .5s;
+}
+.menu2.active .card3-menu {
+    animation: cardmaster3 3s linear forwards;
+    animation-delay: .5s;
+}
+.menu2.active .card4-menu {
+    animation: cardmaster4 3s linear forwards;
+    animation-delay: .5s;
+}
+
+@keyframes cardmaster1 {
+    0% {
+        top: 47%;
+    }
+    20%{
+        top: 47%;
+    }
+    25%{
+        top: 37%;
+    }
+    45%{
+        top: 37%;
+    }
+    50%{
+        top: 47%;
+    }
+    75%{
+        height: 230px;
+    }
+    85%{
+        top: 47%;
+        right: 36%;
+    }
+    100%{
+        top: 63%;
+        right: 61%;
+        transform: rotate(0deg) skew(0); 
+        height: 230px;
+    }
+}
+@keyframes cardmaster2 {
+    0% {
+        top: 41%;
+    }
+    20%{
+        top: 41%;
+    }
+    25%{
+        top: 37%;
+    }
+    45%{
+        top: 37%;
+    }
+    50%{
+        top: 41%;
+    }
+    75%{
+        height: 230px;
+    }
+    85%{
+        top: 41%;
+        right: 36%;
+    }
+    100%{
+        top: 12%;
+        right: 10%;
+        transform: rotate(0deg) skew(0); 
+        height: 230px;
+    }
+}
+@keyframes cardmaster3 {
+    0% {
+        top: 34%;
+    }
+    20%{
+        top: 34%;
+    }
+    25%{
+        top: 37%;
+    }
+    45%{
+        top: 37%;
+    }
+    50%{
+        top: 34%;
+    }
+    75%{
+        height: 230px;
+    }
+    85%{
+        top: 34%;
+        right: 36%;
+    }
+    100%{
+        top: 63%;
+        right: 10%;
+        transform: rotate(0deg) skew(0); 
+        height: 230px;
+    }
+}
+@keyframes cardmaster4 {
+    0% {
+        top: 27%;
+    }
+    20%{
+        top: 27%;
+    }
+    25%{
+        top: 37%;
+    }
+    45%{
+        top: 37%;
+    }
+    50%{
+        top: 27%;
+    }
+    75%{
+        height: 230px;
+    }
+    85%{
+        top: 27%;
+        right: 36%;
+    }
+    100%{
+        top: 12%;
+        right: 61%;
+        transform: rotate(0deg) skew(0); 
+        height: 230px;
+    }
+}
+
+
+
+@media (max-width : 1650px)
+{
+
+}
+@media (max-width : 1500px)
+{
+
+}
+@media (max-width : 1350px)
+{
+
+}
+@media (max-width : 1200px)
+{
+
+}
+@media (max-width : 1100px)
+{
+    .card-scale
+    {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
+@media (max-width : 960px)
+{
+    .new-menu
+    {
+        flex-direction: column;
+    }
+    .menu2.active .link-a
+    {
+        height: 30vh;
+        display: block;
+        margin: 0 auto;
+    }
+    .menu2.active .cards {
+        height: 100vh;
+        z-index: 1;
+        opacity: 1;
+        background: #020312;
+        box-shadow: 0px 0px 5px #219cf3, 
+        2px 2px 1px #00e9de, 
+        inset 10px 0px 60px #080A10, 
+        inset -27px -35px 60px #090912, 
+        inset -12px -9px 23px #0b83ff;
+        width: 101%;
+    }
+    .card-scale
+    {
+        transform: translate(-50%, -50%) scale(0.8);
+        left: 45%;
+    }
+}
+@media (max-width : 788px)
+{
+    .menu-in
+    {
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+
+}
+@media (max-width : 545px)
+{
+    .menu-in
+    {
+        bottom: -45px;
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+    .card-scale
+    {
+        transform: translate(-50%, -50%) scale(0.8);
+        left: 50%;
+    }
+}
